@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MyApp());
 }
-class MyApp extends StatelessWidget{
+
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -11,174 +12,188 @@ class MyApp extends StatelessWidget{
       home: Scaffold(
         appBar: AppBar(
           title: Text(
-            "First App",
+            "Second App",
             style: TextStyle(color: Colors.white),
           ),
           backgroundColor: Colors.green,
           centerTitle: true,
         ),
         backgroundColor: Colors.greenAccent,
-        body: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
+        body: Column(
           children: [
-            //first column
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
+            Row(
               children: [
-                //Container 1
-                Container(
-                  // color: Colors.red,
-                  decoration: BoxDecoration(
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    height: 120,
+                    width: 100,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
                       color: Colors.red,
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(25),
-                          topRight: Radius.circular(25)
-                      )
-                  ),
-                  height: 100,
-                  width: 100,
-                  child: Center(
-                      child: Container(
-                        height: 50,
-                        width: 50,
-                        color: Colors.white,
-                      )),
-                ),
-                //Spacer
-                SizedBox(height: 10,),
-                //Container 2
-                Container(
-                  // color: Colors.red,
-                  decoration: BoxDecoration(
-                      color: Colors.red,
-                      borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(25),
-                          bottomRight: Radius.circular(25)
-                      )
-                  ),
-                  height: 100,
-                  width: 100,
-                  child: Center(
-                      child: Container(
-                        height: 50,
-                        width: 50,
-                        color: Colors.white,
-                      )),
-                ),
-                Container(),
-              ],
+                    ),
+                    child: Center(
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 20,
+                            width: 20,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Container(
+                            height: 20,
+                            width: 20,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.white,
+                            ),
+                          ),
 
+                          Container(
+                            height: 20,
+                            width: 20,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.white,
+
+                            ),
+                            child: Text("A"),
+                          ),
+                          Container(
+                            height: 20,
+                            width: 20,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
+                      ),),
+                  ),
+                ),
+                Container(
+                  height: 120,
+                  width: 100,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    color: Colors.blue,
+                  ),
+                  child: Center(
+                      child: Text(
+                        "B",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
+                      )),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    height: 120,
+                    width: 110,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: Colors.pink,
+                    ),
+                    child: Center(
+                        child: Text(
+                          "C",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold),
+                        )),
+                  ),
+                ),
+              ],
+            ),
+            //2nd Row
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                height: 170,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(40),
+                  color: Colors.purple,
+                ),
+                child: Center(
+                    child: Text(
+                      "D",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold),
+                    )),
+              ),
             ),
 
-            //SizedBox
-            SizedBox(width: 10,),
-            //2nd Column
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
+            //3rd ROw
+            Row(
               children: [
-                //Container 1
-                Container(
-                  // color: Colors.red,
-                  decoration: BoxDecoration(
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    height: 120,
+                    width: 100,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
                       color: Colors.red,
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(25),
-                          topRight: Radius.circular(25)
-                      )
+                    ),
+                    child: Center(
+                        child: Text(
+                          "E",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold),
+                        )),
                   ),
-                  height: 100,
+                ),
+                Container(
+                  height: 120,
                   width: 100,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    color: Colors.blue,
+                  ),
                   child: Center(
-                      child: Container(
-                        height: 50,
-                        width: 50,
-                        color: Colors.white,
+                      child: Text(
+                        "F",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
                       )),
                 ),
-                //Spacer
-                SizedBox(height: 10,),
-                //Container 2
-                Container(
-                  // color: Colors.red,
-                  decoration: BoxDecoration(
-                      color: Colors.red,
-                      borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(25),
-                          bottomRight: Radius.circular(25)
-                      )
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    height: 120,
+                    width: 110,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: Colors.pink,
+                    ),
+                    child: Center(
+                        child: Text(
+                          "G",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold),
+                        )),
                   ),
-                  height: 100,
-                  width: 100,
-                  child: Center(
-                      child: Container(
-                        height: 50,
-                        width: 50,
-                        color: Colors.white,
-                      )),
                 ),
-                Container(),
               ],
-
-            ),
-
-            //SizedBox
-            SizedBox(width: 10,),
-            //3rd Column
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                //Container 1
-                Container(
-                  // color: Colors.red,
-                  decoration: BoxDecoration(
-                      color: Colors.red,
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(25),
-                          topRight: Radius.circular(25)
-                      )
-                  ),
-                  height: 100,
-                  width: 100,
-                  child: Center(
-                      child: Container(
-                        height: 50,
-                        width: 50,
-                        color: Colors.white,
-                      )),
-                ),
-                //Spacer
-                SizedBox(height: 10,),
-                //Container 2
-                Container(
-                  // color: Colors.red,
-                  decoration: BoxDecoration(
-                      color: Colors.red,
-                      borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(25),
-                          bottomRight: Radius.circular(25)
-                      )
-                  ),
-                  height: 100,
-                  width: 100,
-                  child: Center(
-                      child: Container(
-                        height: 50,
-                        width: 50,
-                        color: Colors.white,
-                      )),
-                ),
-                Container(),
-              ],
-
             ),
           ],
         ),
       ),
     );
   }
-
 }
